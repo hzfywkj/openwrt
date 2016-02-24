@@ -355,6 +355,17 @@ $(Device/tplink-8mlzma)
 endef
 TARGET_DEVICES += tl-wdr6500-v2
 
+define Device/tl-wdr5600-v2
+$(Device/tplink-16mlzma)
+  KERNEL := kernel-bin | patch-cmdline | lzma | uImage lzma
+  KERNEL_INITRAMFS := kernel-bin | patch-cmdline | lzma | uImage lzma | mktplinkfw-initramfs
+  BOARDNAME = TL-WDR5600-v2
+  DEVICE_PROFILE = TLWDR5600V2
+  TPLINK_HWID := 0x56000002
+  TPLINK_HEADER_VERSION := 2
+endef
+TARGET_DEVICES += tl-wdr5600-v2
+
 define Device/tl-wdr3320-v2
 $(Device/tplink-4mlzma)
   BOARDNAME = TL-WDR3320-v2
