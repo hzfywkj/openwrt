@@ -336,6 +336,7 @@ get_status_led() {
 	tl-wr882n-v1)
 		status_led="tp-link:white:status"
 		;;
+	tl-wdr5600-v2 | \
 	tl-wdr6500-v2)
 		status_led="tp-link:white:system"
 		;;
