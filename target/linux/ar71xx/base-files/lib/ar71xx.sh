@@ -259,6 +259,9 @@ tplink_board_detect() {
 	"65000002")
 		model="TP-Link TL-WDR6500"
 		;;
+	"560000"*)
+		model="TP-Link TL-WDR5600"
+		;;	
 	"453000"*)
 		model="MERCURY MW4530R"
 		;;
@@ -862,6 +865,9 @@ ar71xx_board_detect() {
 		;;
 	*"TL-WDR6500 v2")
 		name="tl-wdr6500-v2"
+		;;
+	*"TL-WDR5600 v2")
+		name="tl-wdr5600-v2"
 		;;
 	*TL-WR741ND)
 		name="tl-wr741nd"
