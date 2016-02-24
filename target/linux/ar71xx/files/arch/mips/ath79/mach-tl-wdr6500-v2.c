@@ -42,7 +42,7 @@
 #define TL_WDR6500_V2_PCIE_CALDATA_OFFSET	0x5000
 
 static const char *tl_wdr6500_v2_part_probes[] = {
-	"tp-link-64k",
+	"tp-link",
 	NULL,
 };
 
@@ -97,8 +97,6 @@ static void __init tl_ap151_setup(void)
 	u8 tmpmac[ETH_ALEN];
 
 	ath79_register_m25p80(&tl_wdr6500_v2_flash_data);
-
-	ath79_setup_ar933x_phy4_switch(false, false);
 
 	ath79_register_mdio(1, 0x0);
 
